@@ -9,5 +9,9 @@ public abstract class Tower {
 	public abstract int Damage {get;}
 	public abstract int Range {get;}
 	public abstract double Speed {get;}
+	public GameObject Target {get;set;}
+	public double Cooldown {get;set;}
+
 	public abstract void Attack();
+	public abstract void Upgrade();
 }

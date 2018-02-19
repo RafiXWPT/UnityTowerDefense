@@ -18,6 +18,11 @@ public class CannonTower : Tower
 
     public override void Attack()
     {
-		return;
-	}
+		  return;
+	  }
+
+    public override void Upgrade()
+    {
+        throw new System.NotImplementedException();
+    }
 }

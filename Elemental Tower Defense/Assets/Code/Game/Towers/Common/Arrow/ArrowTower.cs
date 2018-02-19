@@ -19,4 +19,9 @@ public class ArrowTower : Tower
     {
         return;
     }
+
+    public override void Upgrade()
+    {
+        throw new System.NotImplementedException();
+    }
 }

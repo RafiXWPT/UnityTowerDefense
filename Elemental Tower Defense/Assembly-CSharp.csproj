@@ -48,9 +48,13 @@
   <ItemGroup>
      <Compile Include="Assets\Code\DatabaseManager\MySQLDatabaseManager.cs" />
      <Compile Include="Assets\Code\DatabaseManager\Utils\DatabaseConnectionUtilities.cs" />
-     <Compile Include="Assets\Code\Game\Elements\Element.cs" />
-     <Compile Include="Assets\Code\Game\Towers\Common\ArrowTower.cs" />
-     <Compile Include="Assets\Code\Game\Towers\Common\CannonTower.cs" />
+     <Compile Include="Assets\Code\Game\Ability.cs" />
+     <Compile Include="Assets\Code\Game\DamageType.cs" />
+     <Compile Include="Assets\Code\Game\Element.cs" />
+     <Compile Include="Assets\Code\Game\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Code\Game\Enemies\EnemyBehaviour.cs" />
+     <Compile Include="Assets\Code\Game\Towers\Common\Arrow\ArrowTower.cs" />
+     <Compile Include="Assets\Code\Game\Towers\Common\Cannon\CannonTower.cs" />
      <Compile Include="Assets\Code\Game\Towers\Tower.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
