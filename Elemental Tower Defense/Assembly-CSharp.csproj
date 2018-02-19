@@ -57,6 +57,7 @@
      <Compile Include="Assets\Code\Game\Towers\Common\Cannon\CannonTower.cs" />
      <Compile Include="Assets\Code\Game\Towers\Tower.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerBehaviour.cs" />
+     <Compile Include="Assets\Code\TowerNodeInitializer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programy/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
