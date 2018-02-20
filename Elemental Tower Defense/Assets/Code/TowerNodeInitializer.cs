@@ -53,8 +53,8 @@ public class TowerNodeInitializer : MonoBehaviour
                 for (var y = 0; y < towerNodePlace.LengthY; y++)
                 {
                     var newNodePlace = Instantiate(TowerNode, new Vector3(startY + y, 1.5F, startX + x), Quaternion.identity);
-                    newNodePlace.name = "TowerNode" + x + "_" + y;
-                    newNodePlace.parent = GameObject.FindGameObjectWithTag("TowerNodes").transform;
+                    newNodePlace.name = TowerNodePlaces.IndexOf(towerNodePlace) + "_" + "TowerNode" + x + "_" + y;
+                    newNodePlace.SetParent(GameObject.FindGameObjectWithTag("TowerNodes").transform);
 					newNodePlace.localScale = new Vector3(0.97F, 0.1F, 0.97F);
                 }
             }
