@@ -7,8 +7,8 @@ public abstract class Enemy {
 	public abstract Element Element {get;}
 	public abstract Ability Ability {get;}
 	public abstract string Name {get;}
-	public abstract int Health {get;}
-	public abstract int Mana {get;}
+	public abstract float Health {get;}
+	public abstract float Mana {get;}
 	public abstract int Reward {get;}
 
 	public abstract void CastAbility();

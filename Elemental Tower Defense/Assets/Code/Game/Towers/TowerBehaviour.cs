@@ -6,7 +6,6 @@ public class TowerBehaviour : MonoBehaviour {
 	public Tower Tower;
 
 	void Start() {
-		Tower = new ArrowTower();
 	}
 
 	void Update() {
