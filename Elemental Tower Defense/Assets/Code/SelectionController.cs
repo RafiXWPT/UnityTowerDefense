@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SelectionController : MonoBehaviour {
 	private Collider[] selectedColliders = new Collider[] {};
 	
 	void Update () {
-		if(Input.GetMouseButtonDown(0)) {
+		if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
 			ResetCurrentSelection();
 			RaycastHit hit;
 			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
 				Debug.Log(hit.transform.tag);
-				if(hit.transform.tag == "TowerNode" || hit.transform.tag == "Platform") {
+				if(hit.transform.tag == "TowerNode") {
+					var towerNode = hit.transform.gameObject.GetComponent<TowerNode>();	
+					if(towerNode.Tower != null)
+					{
+						towerNode.Select();
+					}
+					else {
+						ListNodes(hit.point);
+					}
+				}
+				else if(hit.transform.tag == "Platform") {
 					ListNodes(hit.point);
 				}
 			}
@@ -22,9 +33,8 @@ public class SelectionController : MonoBehaviour {
 	private void ListNodes(Vector3 position) {
 		Debug.ClearDeveloperConsole();
 		Debug.Log(position);
-		var closestColliders = Physics.OverlapSphere(position, 1.2F).Where(c => c.tag == "TowerNode").ToArray();
+		var closestColliders = Physics.OverlapSphere(position, 1.2F).Where(c => c.tag == "TowerNode" && c.gameObject.GetComponent<TowerNode>().Tower == null).ToArray();
 		Debug.Log(closestColliders.Count().ToString() + " in range");
-
 		var hitColliders = GetClosest(closestColliders, position);
 		if(hitColliders == null)
 			return;
@@ -33,7 +43,7 @@ public class SelectionController : MonoBehaviour {
 
 		foreach(var collider in hitColliders) {
 			SelectTiles();
-			//Debug.Log(collider.name);
+			GuiController.Instance.ShowBuildWindow(null);
 		}
 	}
 
@@ -52,9 +62,6 @@ public class SelectionController : MonoBehaviour {
 			}
 
 			closestColliders.Add(rangeDictionary.OrderBy(r => r.Value).Take(1).Select(rk => colliders[rk.Key]).First());
-			if(closestColliders.Count() == 1) {
-				position = closestColliders.First().transform.position;
-			}
 
 			if(closestColliders.Count() == 4) {
 
@@ -115,6 +122,7 @@ public class SelectionController : MonoBehaviour {
 	}
 
 	private void ResetCurrentSelection() {
+		GuiController.Instance.HideBuildWindow();
 		foreach(var collider in selectedColliders)
 		{
 			collider.GetComponent<TowerNode>().Reset();

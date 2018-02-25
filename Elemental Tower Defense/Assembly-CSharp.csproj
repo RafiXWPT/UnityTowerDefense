@@ -47,21 +47,25 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\CameraMovementController.cs" />
-     <Compile Include="Assets\Code\DatabaseManager\MySQLDatabaseManager.cs" />
-     <Compile Include="Assets\Code\DatabaseManager\Utils\DatabaseConnectionUtilities.cs" />
      <Compile Include="Assets\Code\Game\Ability.cs" />
      <Compile Include="Assets\Code\Game\DamageType.cs" />
+     <Compile Include="Assets\Code\Game\DatabaseManager\MySQLDatabaseManager.cs" />
+     <Compile Include="Assets\Code\Game\DatabaseManager\Utils\DatabaseConnectionUtilities.cs" />
      <Compile Include="Assets\Code\Game\Element.cs" />
-     <Compile Include="Assets\Code\Game\Enemies\Enemy.cs" />
-     <Compile Include="Assets\Code\Game\Enemies\EnemyBehaviour.cs" />
-     <Compile Include="Assets\Code\Game\Enemies\MonsterMovement.cs" />
+     <Compile Include="Assets\Code\Game\TowerSelectorNode.cs" />
      <Compile Include="Assets\Code\Game\Towers\Common\Arrow\ArrowTower.cs" />
      <Compile Include="Assets\Code\Game\Towers\Common\Cannon\CannonTower.cs" />
      <Compile Include="Assets\Code\Game\Towers\Tower.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerBehaviour.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerNode.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerNodeInitializer.cs" />
+     <Compile Include="Assets\Code\GameManager.cs" />
+     <Compile Include="Assets\Code\GuiController.cs" />
      <Compile Include="Assets\Code\SelectionController.cs" />
+     <Compile Include="Assets\Resources\Models\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Resources\Models\Enemies\EnemyBehaviour.cs" />
+     <Compile Include="Assets\Resources\Models\Enemies\MonsterMovement.cs" />
+     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programy/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

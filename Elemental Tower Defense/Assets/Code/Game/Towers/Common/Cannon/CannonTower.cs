@@ -16,10 +16,17 @@ public class CannonTower : Tower
 
     public override double Speed {get {return 1;}}
 
+    public override GameObject Prefab {get {return Resources.Load("SimpleTower", typeof(GameObject)) as GameObject;}}
+
     public override void Attack()
     {
 		  return;
 	  }
+
+    public override void Select()
+    {
+        throw new System.NotImplementedException();
+    }
 
     public override void Upgrade()
     {
