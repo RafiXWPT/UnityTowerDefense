@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class MonsterMovement : MonoBehaviour {
-	public Transform[] destinations;
+	Transform[] destinations;
     NavMeshAgent _navMeshAgent;
 	int _currentDestinationIndex = 0;
 	void Start () {
+		destinations = GetCheckpoints();
 		_navMeshAgent = this.GetComponent<NavMeshAgent>();
 		if(_navMeshAgent == null) {
 			return;
@@ -27,5 +29,15 @@ public class MonsterMovement : MonoBehaviour {
 
 	private Vector3 GetCurrentDestination() {
 		return destinations[_currentDestinationIndex].transform.position;
+	}
+
+	private Transform[] GetCheckpoints() {
+		var checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint").Select(go => go.transform);
+		var checkpointDictionary = new Dictionary<Transform, int>();
+		foreach(var checkpoint in checkpoints) {
+			checkpointDictionary.Add(checkpoint, Convert.ToInt32(checkpoint.name));
+		}
+
+		return checkpointDictionary.OrderBy(cd => cd.Value).Select(cd => cd.Key).ToArray();
 	}
 }

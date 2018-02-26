@@ -52,9 +52,13 @@
      <Compile Include="Assets\Code\Game\DatabaseManager\MySQLDatabaseManager.cs" />
      <Compile Include="Assets\Code\Game\DatabaseManager\Utils\DatabaseConnectionUtilities.cs" />
      <Compile Include="Assets\Code\Game\Element.cs" />
+     <Compile Include="Assets\Code\Game\Monsters\Monster.cs" />
+     <Compile Include="Assets\Code\Game\Monsters\MonsterBehaviour.cs" />
+     <Compile Include="Assets\Code\Game\Monsters\MonsterMovement.cs" />
+     <Compile Include="Assets\Code\Game\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Code\Game\TowerSelectorNode.cs" />
-     <Compile Include="Assets\Code\Game\Towers\Common\Arrow\ArrowTower.cs" />
-     <Compile Include="Assets\Code\Game\Towers\Common\Cannon\CannonTower.cs" />
+     <Compile Include="Assets\Code\Game\Towers\Common\Arrow\Basic\BasicArrowTower.cs" />
+     <Compile Include="Assets\Code\Game\Towers\Common\Cannon\BasicCannonTower.cs" />
      <Compile Include="Assets\Code\Game\Towers\Tower.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerBehaviour.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerNode.cs" />
@@ -62,9 +66,6 @@
      <Compile Include="Assets\Code\GameManager.cs" />
      <Compile Include="Assets\Code\GuiController.cs" />
      <Compile Include="Assets\Code\SelectionController.cs" />
-     <Compile Include="Assets\Resources\Models\Enemies\Enemy.cs" />
-     <Compile Include="Assets\Resources\Models\Enemies\EnemyBehaviour.cs" />
-     <Compile Include="Assets\Resources\Models\Enemies\MonsterMovement.cs" />
      <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programy/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

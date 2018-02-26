@@ -119,6 +119,8 @@ public class SelectionController : MonoBehaviour {
 		{
 			collider.GetComponent<TowerNode>().Select();
 		}
+
+		GameManager.Instance.SelectedNodes = selectedColliders.Select(c => c.GetComponent<TowerNode>()).ToArray();
 	}
 
 	private void ResetCurrentSelection() {

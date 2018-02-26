@@ -9,6 +9,10 @@ public class TowerBehaviour : MonoBehaviour {
 	}
 
 	void Update() {
-		Tower.Attack();
+		if(Tower.Cooldown > 0f) {
+			Tower.Cooldown -= Time.deltaTime;
+		} else {
+			Tower.Attack();
+		}
 	}
 }

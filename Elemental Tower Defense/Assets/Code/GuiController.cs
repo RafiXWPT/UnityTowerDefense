@@ -28,6 +28,7 @@ public class GuiController : MonoBehaviour {
 	
 	public void ShowBuildWindow(Tower tower) {
 		DestroyChilds(_towersContainer.transform);
+
 		if(tower == null) {
 			ShowAvailableNewTowers();
 		} else {
@@ -56,6 +57,6 @@ public class GuiController : MonoBehaviour {
 	}
 
 	private void ShowAvailableNewTowers() {
-
+		
 	}
 }

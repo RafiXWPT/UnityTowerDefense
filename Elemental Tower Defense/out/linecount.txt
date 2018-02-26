@@ -1,0 +1,35 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2018-02-26 22:36:14
+count workspace : d:\Unity Projects\Elemental Tower Defense\Elemental Tower Defense
+total files : 23
+total code lines : 711
+total comment lines : 4
+total blank lines : 137
+
+Assembly-CSharp.csproj, code is 97, comment is 0, blank is 1.
+Assets\Code\CameraMovementController.cs, code is 19, comment is 0, blank is 6.
+Assets\Code\Game\Ability.cs, code is 9, comment is 0, blank is 1.
+Assets\Code\Game\DamageType.cs, code is 7, comment is 0, blank is 1.
+Assets\Code\Game\DatabaseManager\MySQLDatabaseManager.cs, code is 13, comment is 0, blank is 2.
+Assets\Code\Game\DatabaseManager\Utils\DatabaseConnectionUtilities.cs, code is 21, comment is 0, blank is 5.
+Assets\Code\Game\Element.cs, code is 9, comment is 0, blank is 0.
+Assets\Code\Game\Monsters\Monster.cs, code is 13, comment is 0, blank is 3.
+Assets\Code\Game\Monsters\MonsterBehaviour.cs, code is 14, comment is 1, blank is 4.
+Assets\Code\Game\Monsters\MonsterMovement.cs, code is 37, comment is 0, blank is 6.
+Assets\Code\Game\ProjectileBehaviour.cs, code is 23, comment is 1, blank is 6.
+Assets\Code\Game\Towers\Common\Arrow\Basic\BasicArrowTower.cs, code is 46, comment is 0, blank is 14.
+Assets\Code\Game\Towers\Common\Cannon\BasicCannonTower.cs, code is 32, comment is 0, blank is 11.
+Assets\Code\Game\Towers\Tower.cs, code is 33, comment is 0, blank is 5.
+Assets\Code\Game\Towers\TowerBehaviour.cs, code is 15, comment is 0, blank is 3.
+Assets\Code\Game\Towers\TowerNode.cs, code is 23, comment is 0, blank is 6.
+Assets\Code\Game\Towers\TowerNodeInitializer.cs, code is 50, comment is 0, blank is 3.
+Assets\Code\Game\TowerSelectorNode.cs, code is 18, comment is 2, blank is 6.
+Assets\Code\GameManager.cs, code is 50, comment is 0, blank is 17.
+Assets\Code\GuiController.cs, code is 48, comment is 0, blank is 14.
+Assets\Code\SelectionController.cs, code is 110, comment is 0, blank is 23.
+Assets\ProjectSettings\ProjectVersion.txt, code is 1, comment is 0, blank is 0.
+Elemental Tower Defense.sln, code is 23, comment is 0, blank is 0.
+===============================================================================

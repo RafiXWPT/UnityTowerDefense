@@ -1,0 +1,155 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "d:\\Unity Projects\\Elemental Tower Defense\\Elemental Tower Defense",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2018-02-26 22:36:14",
+            "filesum": 23,
+            "codesum": 711,
+            "commentsum": 4,
+            "blanksum": 137,
+            "filelist": [
+                {
+                    "blank": 1,
+                    "code": 97,
+                    "comment": 0,
+                    "filename": "Assembly-CSharp.csproj"
+                },
+                {
+                    "blank": 6,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\CameraMovementController.cs"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Ability.cs"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\DamageType.cs"
+                },
+                {
+                    "blank": 2,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\DatabaseManager\\MySQLDatabaseManager.cs"
+                },
+                {
+                    "blank": 5,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\DatabaseManager\\Utils\\DatabaseConnectionUtilities.cs"
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Element.cs"
+                },
+                {
+                    "blank": 3,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Monsters\\Monster.cs"
+                },
+                {
+                    "blank": 4,
+                    "code": 14,
+                    "comment": 1,
+                    "filename": "Assets\\Code\\Game\\Monsters\\MonsterBehaviour.cs"
+                },
+                {
+                    "blank": 6,
+                    "code": 37,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Monsters\\MonsterMovement.cs"
+                },
+                {
+                    "blank": 6,
+                    "code": 23,
+                    "comment": 1,
+                    "filename": "Assets\\Code\\Game\\ProjectileBehaviour.cs"
+                },
+                {
+                    "blank": 14,
+                    "code": 46,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Towers\\Common\\Arrow\\Basic\\BasicArrowTower.cs"
+                },
+                {
+                    "blank": 11,
+                    "code": 32,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Towers\\Common\\Cannon\\BasicCannonTower.cs"
+                },
+                {
+                    "blank": 5,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Towers\\Tower.cs"
+                },
+                {
+                    "blank": 3,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Towers\\TowerBehaviour.cs"
+                },
+                {
+                    "blank": 6,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Towers\\TowerNode.cs"
+                },
+                {
+                    "blank": 3,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\Game\\Towers\\TowerNodeInitializer.cs"
+                },
+                {
+                    "blank": 6,
+                    "code": 18,
+                    "comment": 2,
+                    "filename": "Assets\\Code\\Game\\TowerSelectorNode.cs"
+                },
+                {
+                    "blank": 17,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\GameManager.cs"
+                },
+                {
+                    "blank": 14,
+                    "code": 48,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\GuiController.cs"
+                },
+                {
+                    "blank": 23,
+                    "code": 110,
+                    "comment": 0,
+                    "filename": "Assets\\Code\\SelectionController.cs"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "Assets\\ProjectSettings\\ProjectVersion.txt"
+                },
+                {
+                    "blank": 0,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "Elemental Tower Defense.sln"
+                }
+            ]
+        }
+    ]
+}

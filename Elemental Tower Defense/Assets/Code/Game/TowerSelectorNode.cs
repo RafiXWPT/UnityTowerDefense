@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class TowerSelectorNode : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("mleko");
+        GameManager.Instance.BuildTower(new BasicArrowTower());
     }
 
     public void OnPointerEnter(PointerEventData eventData)

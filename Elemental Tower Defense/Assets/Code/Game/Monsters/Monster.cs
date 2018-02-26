@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy {
+public abstract class Monster {
 
 	public abstract Element Element {get;}
 	public abstract Ability Ability {get;}

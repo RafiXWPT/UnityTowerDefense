@@ -15,12 +15,14 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public TowerNode[] SelectedNodes {get;set;}
+
 	public int Gold;
 	public int Essence;
 	public int Wave;
 	public int NetWorth;
-	public Enemy CurrentEnemy;
-	public Enemy NextEnemy;
+	public Monster CurrentEnemy;
+	public Monster NextEnemy;
 
 	private Transform _towersContainer;
 
@@ -36,9 +38,22 @@ public class GameManager : MonoBehaviour {
 		
 	}
 
-	public void BuildTower(Tower tower, TowerNode[] nodes) {
-		var newTower = GameObject.Instantiate(tower.Prefab, GetTowerPosition(nodes), Quaternion.identity);
-		newTower.transform.SetParent(_towersContainer.transform);
+	public void BuildTower(Tower tower, TowerNode[] nodes = null) {
+		if(nodes == null)
+		{
+			nodes = SelectedNodes;
+		}
+
+		var towerPosition = GetTowerPosition(nodes);
+
+		var newTowerObject = GameObject.Instantiate(tower.Prefab, towerPosition, Quaternion.identity);
+		tower.Position = towerPosition;
+		newTowerObject.transform.SetParent(_towersContainer.transform);
+
+		newTowerObject.GetComponent<TowerBehaviour>().Tower = tower;
+
+		foreach(var node in nodes)
+			node.SetTower(tower);
 	}
 
 	private Vector3 GetTowerPosition(TowerNode[] nodes) {
@@ -47,6 +62,6 @@ public class GameManager : MonoBehaviour {
 			bounds.Encapsulate(nodes[i].transform.position);
 		}
 
-		return bounds.center;
+		return new Vector3(bounds.center.x, 1.6f, bounds.center.z);
 	}
 }

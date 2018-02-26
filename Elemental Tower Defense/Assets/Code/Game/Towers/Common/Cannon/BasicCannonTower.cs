@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonTower : Tower
+public class BasicCannonTower : Tower
 {
-    public override string Name {get {return "Cannon Tower";}}
+    public override string Name {get {return "Basic Cannon Tower";}}
 
     public override Element Element {get {return Element.ARMOUR;}}
 
@@ -17,6 +17,14 @@ public class CannonTower : Tower
     public override double Speed {get {return 1;}}
 
     public override GameObject Prefab {get {return Resources.Load("SimpleTower", typeof(GameObject)) as GameObject;}}
+    public override GameObject Shoot {
+        get {
+            return GetShootPrefab();
+        }
+    }
+
+    public override DamageType DamageType {get {return DamageType.PROJECTILE;}}
+    protected override string ResourcesLocalizationPrefix {get {return "Models/Towers/Common/Arrow/Basic/";}}
 
     public override void Attack()
     {
