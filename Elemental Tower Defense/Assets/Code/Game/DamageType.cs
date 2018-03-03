@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum DamageType {
 	PROJECTILE,
-	PARTICLE
+	SPLASH,
 }

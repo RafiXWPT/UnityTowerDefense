@@ -23,18 +23,13 @@ public class BasicCannonTower : Tower
         }
     }
 
-    public override DamageType DamageType {get {return DamageType.PROJECTILE;}}
+    public override DamageType DamageType {get {return DamageType.SPLASH;}}
     protected override string ResourcesLocalizationPrefix {get {return "Models/Towers/Common/Arrow/Basic/";}}
 
     public override void Attack()
     {
 		  return;
-	  }
-
-    public override void Select()
-    {
-        throw new System.NotImplementedException();
-    }
+	}
 
     public override void Upgrade()
     {

@@ -44,14 +44,8 @@ public class BasicArrowTower : Tower {
 
         var shoot = GameObject.Instantiate (Shoot, Position, Quaternion.identity);
         var shootBehaviour = shoot.GetComponent<ProjectileBehaviour> ();
-        shootBehaviour.Target = Target.transform;
-        shootBehaviour.ProjectileSpeed = 10f;
-        shootBehaviour.Ready = true;
+        shootBehaviour.Initialize(this, Target.transform, 10f);
         Cooldown = Speed;
-    }
-
-    public override void Select () {
-        throw new System.NotImplementedException ();
     }
 
     public override void Upgrade () {

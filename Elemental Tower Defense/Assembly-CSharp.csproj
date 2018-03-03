@@ -52,13 +52,14 @@
      <Compile Include="Assets\Code\Game\DatabaseManager\MySQLDatabaseManager.cs" />
      <Compile Include="Assets\Code\Game\DatabaseManager\Utils\DatabaseConnectionUtilities.cs" />
      <Compile Include="Assets\Code\Game\Element.cs" />
+     <Compile Include="Assets\Code\Game\Monsters\Levels\001\SlowNigga.cs" />
      <Compile Include="Assets\Code\Game\Monsters\Monster.cs" />
      <Compile Include="Assets\Code\Game\Monsters\MonsterBehaviour.cs" />
      <Compile Include="Assets\Code\Game\Monsters\MonsterMovement.cs" />
-     <Compile Include="Assets\Code\Game\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Code\Game\TowerSelectorNode.cs" />
-     <Compile Include="Assets\Code\Game\Towers\Common\Arrow\Basic\BasicArrowTower.cs" />
-     <Compile Include="Assets\Code\Game\Towers\Common\Cannon\BasicCannonTower.cs" />
+     <Compile Include="Assets\Code\Game\Towers\Common\Projectile\Arrow\Basic\BasicArrowTower.cs" />
+     <Compile Include="Assets\Code\Game\Towers\Common\Splash\Basic\Cannon\BasicCannonTower.cs" />
+     <Compile Include="Assets\Code\Game\Towers\ShootBehaviours\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Code\Game\Towers\Tower.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerBehaviour.cs" />
      <Compile Include="Assets\Code\Game\Towers\TowerNode.cs" />

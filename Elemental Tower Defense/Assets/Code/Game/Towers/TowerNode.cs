@@ -10,9 +10,6 @@ public class TowerNode : MonoBehaviour {
 
 	public void Select () {
 		SetColor (selectedColor);
-		if (Tower != null) {
-			Tower.Select ();
-		}
 	}
 
 	public void Reset () {

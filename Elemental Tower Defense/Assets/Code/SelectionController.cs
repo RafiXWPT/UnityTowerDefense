@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class SelectionController : MonoBehaviour {
 	private Collider[] selectedColliders = new Collider[] {};
+	private TowerBehaviour _selectedTower;
 	
 	void Update () {
 		if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
@@ -13,7 +14,11 @@ public class SelectionController : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
 				Debug.Log(hit.transform.tag);
-				if(hit.transform.tag == "TowerNode") {
+				if(hit.transform.tag == "Tower") {
+					_selectedTower = hit.transform.gameObject.GetComponent<TowerBehaviour>();
+					_selectedTower.Select();
+				}
+				else if(hit.transform.tag == "TowerNode") {
 					var towerNode = hit.transform.gameObject.GetComponent<TowerNode>();	
 					if(towerNode.Tower != null)
 					{
@@ -125,6 +130,9 @@ public class SelectionController : MonoBehaviour {
 
 	private void ResetCurrentSelection() {
 		GuiController.Instance.HideBuildWindow();
+		if(_selectedTower != null)
+			_selectedTower.Unselect();
+			
 		foreach(var collider in selectedColliders)
 		{
 			collider.GetComponent<TowerNode>().Reset();

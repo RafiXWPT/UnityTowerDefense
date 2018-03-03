@@ -9,6 +9,7 @@ public class MonsterMovement : MonoBehaviour {
 	Transform[] destinations;
     NavMeshAgent _navMeshAgent;
 	int _currentDestinationIndex = 0;
+
 	void Start () {
 		destinations = GetCheckpoints();
 		_navMeshAgent = this.GetComponent<NavMeshAgent>();

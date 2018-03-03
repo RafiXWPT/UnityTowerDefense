@@ -16,10 +16,8 @@ public abstract class Tower {
 	public Vector3 Position {get;set;}
 	public GameObject Target {get;set;}
 	public double Cooldown {get;set;}
-
 	public abstract void Attack();
 	public abstract void Upgrade();
-	public abstract void Select();
 	protected virtual GameObject GetTowerPrefab() {
 		return Resources.Load (GetPrefabResourcesPath(), typeof (GameObject)) as GameObject;
 	}
