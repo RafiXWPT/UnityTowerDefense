@@ -7,7 +7,7 @@ public class TowerBehaviour : MonoBehaviour {
 	public Color normalColor;
 	public Color selectedColor;
 
-	private GameObject _towerRadius;
+	public GameObject TowerRadius;
 
 	void Start() {
 	}
@@ -21,15 +21,14 @@ public class TowerBehaviour : MonoBehaviour {
 	}
 
 	public void Select() {
-		_towerRadius = GameObject.Instantiate(GuiController.Instance.TowerRadius, this.transform.position, Quaternion.identity);
-		//_towerRadius.transform.localRotation = new Vector3(90,0,0);
-		_towerRadius.transform.SetParent(this.transform);
-		_towerRadius.GetComponent<Canvas>().enabled = true;
+		GameManager.Instance.SelectedTower = this;
+		TowerRadius.GetComponent<Canvas>().enabled = true;
 		SetColor(selectedColor);
 	}
 
 	public void Unselect() {
-		_towerRadius.GetComponent<Canvas>().enabled = false;
+		GameManager.Instance.SelectedTower = null;
+		TowerRadius.GetComponent<Canvas>().enabled = false;
 		SetColor(normalColor);
 	}
 

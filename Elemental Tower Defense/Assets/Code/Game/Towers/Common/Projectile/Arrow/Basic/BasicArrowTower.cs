@@ -32,7 +32,7 @@ public class BasicArrowTower : Tower {
     }
 
     public override void Attack () {
-        if (Target == null) {
+        if (Target == null || Vector3.Distance(Position, Target.transform.position) >= Range) {
             Target = Physics.OverlapSphere (Position, Range).Where (o => o.GetComponent<MonsterBehaviour> () != null).Select (o => o.gameObject).FirstOrDefault ();
 
             if (Target == null)
@@ -42,7 +42,7 @@ public class BasicArrowTower : Tower {
             }
         }
 
-        var shoot = GameObject.Instantiate (Shoot, Position, Quaternion.identity);
+        var shoot = GameObject.Instantiate (Shoot, Position + new Vector3(0, 2, 0), Quaternion.identity);
         var shootBehaviour = shoot.GetComponent<ProjectileBehaviour> ();
         shootBehaviour.Initialize(this, Target.transform, 10f);
         Cooldown = Speed;

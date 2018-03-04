@@ -4,17 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Monster {
-
-	public abstract Element Element {get;}
-	public abstract Ability Ability {get;}
-	public abstract string Name {get;}
-	public abstract float Health {get;}
+	protected string ResourcesLocalizationPrefix {get {return "Models/Monsters/Levels/{0}/Monster" ;}}
+	public Element Element {get;}
+	public Ability Ability {get;}
+	public string Name {get;}
+	public float Health {get;}
 	public float CurrentHealth {get; set;}
-	public abstract float Mana {get;}
+	public float Mana {get;}
 	public float CurrentMana {get;set;}
-	public abstract int Reward {get;}
+	public Reward Reward {get;}
 
-	protected Monster() {
+    public GameObject Prefab {get {
+        return GetMonsterPrefab();
+    }}
+
+	public Monster(Element element, Ability ability, string name, float health, float mana, Reward reward) {
+		Element = element;
+		Ability = ability;
+		Name = name;
+		Health = health;
+		Mana = mana;
+		Reward = reward;
+		
 		CurrentHealth = Health;
 		CurrentMana = Mana;
 	}
@@ -22,5 +33,13 @@ public abstract class Monster {
 	public abstract void CastAbility();
 	public virtual void GetDamage(float amount) {
 		CurrentHealth -= amount;
+	}
+
+	protected virtual GameObject GetMonsterPrefab() {
+		return Resources.Load (GetPrefabResourcesPath(), typeof (GameObject)) as GameObject;
+	}
+
+	private string GetPrefabResourcesPath() {
+		return string.Format(ResourcesLocalizationPrefix, GameManager.Instance.Wave);
 	}
 }

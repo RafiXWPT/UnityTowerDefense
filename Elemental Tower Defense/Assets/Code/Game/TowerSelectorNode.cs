@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TowerSelectorNode : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler {
+public class TowerSelectorNode : MonoBehaviour, IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
         GameManager.Instance.BuildTower(new BasicArrowTower());
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("mleko2");
-    }
-
-    // Use this for initialization
     void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

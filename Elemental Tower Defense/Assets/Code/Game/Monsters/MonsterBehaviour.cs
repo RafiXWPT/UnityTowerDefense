@@ -11,7 +11,6 @@ public class MonsterBehaviour : MonoBehaviour {
 	private Image _healthBar;
 
 	void Awake() {
-		Monster = new SlowNigga();
 		_healthBarCanvas = this.GetComponentInChildren<Canvas>().transform;
 		_healthBar = this.GetComponentsInChildren<Image>().Where(o => o.tag == "HealthBar").First();
 	}
@@ -24,14 +23,22 @@ public class MonsterBehaviour : MonoBehaviour {
 		UpdateHealthBarRotation();
 	}
 
+	public void SetMonster(Monster monster) {
+		Monster = monster;
+	}
+
 	private void UpdateHealthBarRotation() {
 		var toCameraRotation = Camera.main.transform.rotation;
 		_healthBarCanvas.LookAt(_healthBarCanvas.position + toCameraRotation * Vector3.back, toCameraRotation * Vector3.up);
 	}
 
 	public void GetDamage(int amount) {
+		if(Monster == null)
+			return;
+
 		Monster.GetDamage(amount);
 		if(Monster.CurrentHealth <= 0) {
+			GameManager.Instance.Gold += Monster.Reward.Gold;
 			GameObject.Destroy(this.gameObject);
 			return;
 		}
