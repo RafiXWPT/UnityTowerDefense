@@ -14,6 +14,7 @@ public class GuiController : MonoBehaviour {
 		}
 	}
 
+	public GameObject TowerRadius;
 	public GameObject BuildWindow;
 	public GameObject TowerSelectorNode;
 	private GameObject _towersContainer;

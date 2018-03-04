@@ -50,7 +50,10 @@ public class GameManager : MonoBehaviour {
 		tower.Position = towerPosition;
 		newTowerObject.transform.SetParent(_towersContainer.transform);
 
-		newTowerObject.GetComponent<TowerBehaviour>().Tower = tower;
+		var newTowerBehaviour = newTowerObject.GetComponent<TowerBehaviour>();
+		newTowerBehaviour.Tower = tower;
+		//newTowerBehaviour.Select();
+		
 
 		foreach(var node in nodes)
 			node.SetTower(tower);

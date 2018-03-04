@@ -132,7 +132,7 @@ public class SelectionController : MonoBehaviour {
 		GuiController.Instance.HideBuildWindow();
 		if(_selectedTower != null)
 			_selectedTower.Unselect();
-			
+
 		foreach(var collider in selectedColliders)
 		{
 			collider.GetComponent<TowerNode>().Reset();
