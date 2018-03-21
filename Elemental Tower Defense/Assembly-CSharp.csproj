@@ -73,7 +73,6 @@
      <Compile Include="Assets\Code\GameManager.cs" />
      <Compile Include="Assets\Code\GuiController.cs" />
      <Compile Include="Assets\Code\SelectionController.cs" />
-     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programy/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
